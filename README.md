@@ -49,6 +49,8 @@ Demonstrate your understanding of this Sprint's concepts by answering the follow
 
 - [ ] Describe a Resource?
 
+        A resource is something that is held on the server that can be called upon via CRUD funtions (Create, Read, Update, Delete).
+
 - [ ] What can the API return to help clients know if a request was successful?
 
         The API can return a successful 200 code response in the DOM, or even have text displayed on the page when a successful request is made.
