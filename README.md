@@ -40,18 +40,28 @@ Demonstrate your understanding of this Sprint's concepts by answering the follow
 
 - [ ] Mention two parts of Express that you learned about this week.
 
+        Express allows to have extra functionality to go with Node.js, like middleware and routing, and it also allows us to build web applications, serve SPAs build RESTful webservices that work with JSON, and other useful things.
+
 - [ ] Describe Middleware?
+
+        Middleware acts like validation for our CRUD functions to verify that everything that is being added or removed from our server is valid. If not, it routes to a different part of our app and displays a corresponding response if anything is wrong.
+
 
 - [ ] Describe a Resource?
 
 - [ ] What can the API return to help clients know if a request was successful?
 
+        The API can return a successful 200 code response in the DOM, or even have text displayed on the page when a successful request is made.
+
+
 - [ ] How can we partition our application into sub-applications?
+
+        We could separate different APIs into their own corresonding applications. For instance, if we need to post users or edit users, we can have different functions specifically for that part of app, and if users need the ability to post to their own page, that would be a separate application with its own CRUD functions.
 
 ## Minimum Viable Product
 
-- [ ] Configure an _npm script_ named _"server"_ that will execute your code using _nodemon_. Make _nodemon_ be a development time dependency only, it shouldn't be deployed to production.
-- [ ] Configure an _npm script_ named _"start"_ that will execute your code using _node_.
+- [x] Configure an _npm script_ named _"server"_ that will execute your code using _nodemon_. Make _nodemon_ be a development time dependency only, it shouldn't be deployed to production.
+- [x] Configure an _npm script_ named _"start"_ that will execute your code using _node_.
 
 Design and build the necessary endpoints to:
 
