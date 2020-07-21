@@ -34,8 +34,8 @@ router.get('/', async (req, res, next) => {
   });
 
   router.put('/:id', validateActionID, validateAction, async (req, res, next) => {
-      if (req.body.text){
-        const editActionInfo = await Actions.update(req.params.id, req.body)
+    const editActionInfo = await Actions.update(req.params.id, req.body)
+      if (editActionInfo) {
         res.status(201).json(editActionInfo);
       } else {
         res.status(500).json({ error: 'Somethings going on and we gotta figure out what'})

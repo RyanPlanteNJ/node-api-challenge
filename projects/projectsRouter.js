@@ -70,7 +70,7 @@ router.get('/:id/actions', validateProjectID, async (req, res, next) => {
 
 router.delete('/:id', validateProjectID, async (req, res, next) => {
   const project = await Projects.remove(req.params.id);
-  if (post)  {
+  if (project)  {
     res.status(200).json(project)
   } else {
     res.status(500).json({ error: "The project could not be removed"});
@@ -78,18 +78,13 @@ router.delete('/:id', validateProjectID, async (req, res, next) => {
 });
 
 router.put('/:id', validateProjectID, async (req, res, next) => {
-try{
-  const project = await Projects.update(req.params.id);
+  const project = await Projects.update(req.params.id, req.body);
   if(project) {
      res.status(200).json(project);
   } else {
-    console.log(error);
     res.status(500).json({
       error: "Project could not be updated"
     });
-    }
-  } catch(error) {
-    next(error);
   }
 });
 
